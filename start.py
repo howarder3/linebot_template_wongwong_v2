@@ -21,7 +21,9 @@ import datetime
 #---------------- self define module ----------------
 import text_push as text_push
 import text_reply as text_reply
-import mykey as mykey
+
+#---------------- self define variables ----------------
+import mykey
 
 #---------------- line settings ----------------
 # Channel Access Token
