@@ -13,7 +13,7 @@ from mykey import *
 # Channel Access Token
 line_bot_api = LineBotApi(mykey.LINE_CHANNEL_ACCESS_TOKEN)
 
-TARGET_PUSH_ID = mykey.LINE_PUSH_TARGET_ID
+TARGET_PUSH_ID = LINE_PUSH_TARGET_ID
 
 #---------------------------------------------------
 
