@@ -11,7 +11,7 @@ from mykey import *
 
 #---------------- line settings ----------------
 # Channel Access Token
-line_bot_api = LineBotApi(mykey.LINE_CHANNEL_ACCESS_TOKEN)
+line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 
 TARGET_PUSH_ID = LINE_PUSH_TARGET_ID
 
