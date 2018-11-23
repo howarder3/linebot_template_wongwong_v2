@@ -6,8 +6,8 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
-#---------------- self define module ----------------
-import mykey as mykey
+#---------------- self define variables ----------------
+from mykey import *
 
 #---------------- line settings ----------------
 # Channel Access Token
