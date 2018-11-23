@@ -23,7 +23,7 @@ import text_push as text_push
 import text_reply as text_reply
 
 #---------------- self define variables ----------------
-import mykey
+from mykey import *
 
 #---------------- line settings ----------------
 # Channel Access Token
