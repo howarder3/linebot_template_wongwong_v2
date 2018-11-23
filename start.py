@@ -59,7 +59,7 @@ def handle_message(event):
         output_message = TextSendMessage(text=str(event))  
         line_bot_api.reply_message(event.reply_token, output_message)
 
-    elif user_message.lower() == "speed" :
+    elif event.message.text.lower() == "speed" :
         message = "【收到訊息時間】\n"
         message += str(message_get_time-message_send_time)+"秒"
         message += "\n【處理訊息時間】\n"
