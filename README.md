@@ -8,8 +8,8 @@ heroku_setting
 ```
   201  git init
   202  git add .
-  203  git commit -m "test"
-  204  git remote add heroku "https://git.heroku.com/coldstemtest.git"
+  203  git commit -m "commit message"
+  204  git remote add heroku "heroku git url"
   205  git push heroku master
   206  history > heroku_setting.txt
 ```

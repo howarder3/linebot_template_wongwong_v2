@@ -57,24 +57,27 @@ def handle_message(event):
     print(event)
     message_send_time = float(event.timestamp)/1000
     message_get_time = float(time.time())
+    msg_type = event.message.type
+
     if event.message.text == "info":
         output_message = TextSendMessage(text=str(event))  
         line_bot_api.reply_message(event.reply_token, output_message)
 
-    elif event.message.text.lower() == "speed" :
+    if event.message.text.lower() == "speed" :
         output_message = ("【收到訊息時間】\n{} 秒\n【處理訊息時間】\n{} 秒".format(message_get_time-message_send_time,float(time.time())-message_get_time))
         output_message = text_reply.text_reply_message(user_message)
         line_bot_api.reply_message(event.reply_token, output_message)
 
-    elif event.message.type == "text":
+    if msg_type == "sticker":
+        output_message = StickerSendMessage(package_id='2',sticker_id=str(random.randint(140,180)))
+        line_bot_api.reply_message(event.reply_token, output_message) 
+
+    elif msg_type == "text":
         user_message = event.message.text 
         output_message = text_reply.text_reply_message(user_message)
         line_bot_api.reply_message(event.reply_token, output_message)
 
-    elif event.message.type == "sticker":
-        output_message = StickerSendMessage(package_id='2',sticker_id=str(random.randint(140,180)))
-        line_bot_api.reply_message(event.reply_token, output_message) 
-
+    
 
 
 import os
